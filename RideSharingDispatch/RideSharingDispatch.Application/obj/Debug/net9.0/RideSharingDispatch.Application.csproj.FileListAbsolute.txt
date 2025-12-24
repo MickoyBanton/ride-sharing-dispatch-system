@@ -1,0 +1,16 @@
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\bin\Debug\net9.0\RideSharingDispatch.Application.deps.json
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\bin\Debug\net9.0\RideSharingDispatch.Application.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\bin\Debug\net9.0\RideSharingDispatch.Application.pdb
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\bin\Debug\net9.0\RideSharingDispatch.Domain.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\bin\Debug\net9.0\RideSharingDispatch.Domain.pdb
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.csproj.AssemblyReference.cache
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.AssemblyInfoInputs.cache
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.AssemblyInfo.cs
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.csproj.CoreCompileInputs.cache
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.sourcelink.json
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideShar.7513AC98.Up2Date
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\refint\RideSharingDispatch.Application.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\RideSharingDispatch.Application.pdb
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Application\obj\Debug\net9.0\ref\RideSharingDispatch.Application.dll

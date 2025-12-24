@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "RideSharingDispatch.Infrastructure/1.0.0": {
+        "dependencies": {
+          "RideSharingDispatch.Application": "1.0.0",
+          "RideSharingDispatch.Domain": "1.0.0"
+        },
+        "runtime": {
+          "RideSharingDispatch.Infrastructure.dll": {}
+        }
+      },
+      "RideSharingDispatch.Application/1.0.0": {
+        "dependencies": {
+          "RideSharingDispatch.Domain": "1.0.0"
+        },
+        "runtime": {
+          "RideSharingDispatch.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RideSharingDispatch.Domain/1.0.0": {
+        "runtime": {
+          "RideSharingDispatch.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RideSharingDispatch.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RideSharingDispatch.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RideSharingDispatch.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

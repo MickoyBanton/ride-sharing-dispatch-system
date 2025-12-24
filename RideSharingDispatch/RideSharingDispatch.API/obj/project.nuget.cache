@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rtSa3Ktyf1E=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\RideSharingDispatch.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\micko\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "C:\\Users\\micko\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

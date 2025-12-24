@@ -1,0 +1,12 @@
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\bin\Debug\net9.0\RideSharingDispatch.Domain.deps.json
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\bin\Debug\net9.0\RideSharingDispatch.Domain.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\bin\Debug\net9.0\RideSharingDispatch.Domain.pdb
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.AssemblyInfoInputs.cache
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.AssemblyInfo.cs
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.csproj.CoreCompileInputs.cache
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.sourcelink.json
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\refint\RideSharingDispatch.Domain.dll
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\RideSharingDispatch.Domain.pdb
+C:\Users\micko\OneDrive\Desktop\Uber-mini\ride-sharing-dispatch-system\RideSharingDispatch\RideSharingDispatch.Domain\obj\Debug\net9.0\ref\RideSharingDispatch.Domain.dll

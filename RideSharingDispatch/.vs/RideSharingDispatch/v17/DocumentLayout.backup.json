@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A55020DB-B000-4BBA-BA85-2F25C275580C}|RideSharingDispatch.Infrastructure\\RideSharingDispatch.Infrastructure.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55020DB-B000-4BBA-BA85-2F25C275580C}|RideSharingDispatch.Infrastructure\\RideSharingDispatch.Infrastructure.csproj|solutionrelative:ridesharingdispatch.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55020DB-B000-4BBA-BA85-2F25C275580C}|RideSharingDispatch.Infrastructure\\RideSharingDispatch.Infrastructure.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.infrastructure\\repositories\\triprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55020DB-B000-4BBA-BA85-2F25C275580C}|RideSharingDispatch.Infrastructure\\RideSharingDispatch.Infrastructure.csproj|solutionrelative:ridesharingdispatch.infrastructure\\repositories\\triprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A55020DB-B000-4BBA-BA85-2F25C275580C}|RideSharingDispatch.Infrastructure\\RideSharingDispatch.Infrastructure.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.infrastructure\\repositories\\driverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A55020DB-B000-4BBA-BA85-2F25C275580C}|RideSharingDispatch.Infrastructure\\RideSharingDispatch.Infrastructure.csproj|solutionrelative:ridesharingdispatch.infrastructure\\repositories\\driverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895ED7B9-1DEF-44B0-A613-FDFE984DCDB7}|RideSharingDispatch.API\\RideSharingDispatch.API.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895ED7B9-1DEF-44B0-A613-FDFE984DCDB7}|RideSharingDispatch.API\\RideSharingDispatch.API.csproj|solutionrelative:ridesharingdispatch.api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895ED7B9-1DEF-44B0-A613-FDFE984DCDB7}|RideSharingDispatch.API\\RideSharingDispatch.API.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.api\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895ED7B9-1DEF-44B0-A613-FDFE984DCDB7}|RideSharingDispatch.API\\RideSharingDispatch.API.csproj|solutionrelative:ridesharingdispatch.api\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{895ED7B9-1DEF-44B0-A613-FDFE984DCDB7}|RideSharingDispatch.API\\RideSharingDispatch.API.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{895ED7B9-1DEF-44B0-A613-FDFE984DCDB7}|RideSharingDispatch.API\\RideSharingDispatch.API.csproj|solutionrelative:ridesharingdispatch.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.application\\dtos\\driverstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|solutionrelative:ridesharingdispatch.application\\dtos\\driverstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.application\\dtos\\triprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|solutionrelative:ridesharingdispatch.application\\dtos\\triprequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.application\\services\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|solutionrelative:ridesharingdispatch.application\\services\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.application\\services\\dispatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|solutionrelative:ridesharingdispatch.application\\services\\dispatchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.application\\interfaces\\itriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|solutionrelative:ridesharingdispatch.application\\interfaces\\itriprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|c:\\users\\micko\\onedrive\\desktop\\uber-mini\\ride-sharing-dispatch-system\\ridesharingdispatch\\ridesharingdispatch.application\\interfaces\\idriverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C1F32A7-E9C0-474F-9580-091A10ECFD08}|RideSharingDispatch.Application\\RideSharingDispatch.Application.csproj|solutionrelative:ridesharingdispatch.application\\interfaces\\idriverrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TripRepository.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Infrastructure\\Repositories\\TripRepository.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Infrastructure\\Repositories\\TripRepository.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Infrastructure\\Repositories\\TripRepository.cs",
+              "RelativeToolTip": "RideSharingDispatch.Infrastructure\\Repositories\\TripRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:52:32.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DriverRepository.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Infrastructure\\Repositories\\DriverRepository.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Infrastructure\\Repositories\\DriverRepository.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Infrastructure\\Repositories\\DriverRepository.cs",
+              "RelativeToolTip": "RideSharingDispatch.Infrastructure\\Repositories\\DriverRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:52:10.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "RideSharingDispatch.Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:48:27.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TripController.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\Controllers\\TripController.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.API\\Controllers\\TripController.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\Controllers\\TripController.cs",
+              "RelativeToolTip": "RideSharingDispatch.API\\Controllers\\TripController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:42:28.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DriverController.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\Controllers\\DriverController.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.API\\Controllers\\DriverController.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\Controllers\\DriverController.cs",
+              "RelativeToolTip": "RideSharingDispatch.API\\Controllers\\DriverController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:40:29.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RideSharingDispatch.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:40:00.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DriverStatusDto.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\DTOs\\DriverStatusDto.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Application\\DTOs\\DriverStatusDto.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\DTOs\\DriverStatusDto.cs",
+              "RelativeToolTip": "RideSharingDispatch.Application\\DTOs\\DriverStatusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:36:38.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TripRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\DTOs\\TripRequestDto.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Application\\DTOs\\TripRequestDto.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\DTOs\\TripRequestDto.cs",
+              "RelativeToolTip": "RideSharingDispatch.Application\\DTOs\\TripRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:36:21.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PricingService.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Services\\PricingService.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Application\\Services\\PricingService.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Services\\PricingService.cs",
+              "RelativeToolTip": "RideSharingDispatch.Application\\Services\\PricingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:34:36.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DispatchService.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Services\\DispatchService.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Application\\Services\\DispatchService.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Services\\DispatchService.cs",
+              "RelativeToolTip": "RideSharingDispatch.Application\\Services\\DispatchService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:33:55.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ITripRepository.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Interfaces\\ITripRepository.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Application\\Interfaces\\ITripRepository.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Interfaces\\ITripRepository.cs",
+              "RelativeToolTip": "RideSharingDispatch.Application\\Interfaces\\ITripRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:29:26.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IDriverRepository.cs",
+              "DocumentMoniker": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Interfaces\\IDriverRepository.cs",
+              "RelativeDocumentMoniker": "RideSharingDispatch.Application\\Interfaces\\IDriverRepository.cs",
+              "ToolTip": "C:\\Users\\micko\\OneDrive\\Desktop\\Uber-mini\\ride-sharing-dispatch-system\\RideSharingDispatch\\RideSharingDispatch.Application\\Interfaces\\IDriverRepository.cs",
+              "RelativeToolTip": "RideSharingDispatch.Application\\Interfaces\\IDriverRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T02:28:59.588Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
