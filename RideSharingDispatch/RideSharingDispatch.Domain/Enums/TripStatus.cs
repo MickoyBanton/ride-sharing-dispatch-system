@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RideSharingDispatch.Domain.Enums
+﻿namespace RideSharingDispatch.Domain.Enums
 {
-    internal class TripStatus
-    {
-    }
+     public enum TripStatus
+     {
+         Requested = 1,
+         Accepted = 2,
+         Arrived = 3,
+         InProgress = 4,
+         Completed = 5,
+         Cancelled = 6
+     }
+    
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RideSharingDispatch.Domain.Enums
+﻿namespace RideSharingDispatch.Domain.Enums
 {
-    internal class VehicleType
+    public enum VehicleType
     {
+        Standard = 1,
+        Premium = 2
     }
 }

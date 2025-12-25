@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RideSharingDispatch.Domain.Enums
+﻿namespace RideSharingDispatch.Domain.Enums
 {
-    internal class UserRole
+    public enum UserRole
     {
+        Driver  = 1,
+        Rider = 2
     }
 }
