@@ -1,6 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Remove="RideSharingDispatch.Infrastructure\**" />
+    <EmbeddedResource Remove="RideSharingDispatch.Infrastructure\**" />
+    <None Remove="RideSharingDispatch.Infrastructure\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RideSharingDispatch.Domain\RideSharingDispatch.Domain.csproj" />
     <ProjectReference Include="..\RideSharingDispatch.Application\RideSharingDispatch.Application.csproj" />
   </ItemGroup>
@@ -12,10 +18,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="RideSharingDispatch.Infrastructure\obj\" />
   </ItemGroup>
 
   <PropertyGroup>
