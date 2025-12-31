@@ -9,10 +9,9 @@ namespace RideSharingDispatch.Application.Interfaces
 {
     public interface IRiderRepository
     {
-        void AddRider(Rider rider);
-        void RemoveRider(Rider rider);
-        Rider GetRider(int id);
-
-
+        Task AddRiderAsync(Rider rider);
+        Task RemoveRiderAsync(Rider rider);
+        Task <Rider?> GetRiderAsync(int userId);
+        Task<IEnumerable<Rider>> GetAllRidersAsync();
     }
 }
