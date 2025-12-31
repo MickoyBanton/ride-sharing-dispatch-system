@@ -9,16 +9,16 @@ namespace RideSharingDispatch.Application.Interfaces
 {
     public interface IDriverRepository
     {
-        void AddDriver(Driver driver);
-        void RemoveDriver(int UserId);
-        void UpdateDriverLocation (decimal Latitude, decimal Longitude);
-        void ChangeDriverAvailability (bool IsOnline);
-        Driver GetDriver(int UserId);
+        Task AddDriver(Driver driver);
+        Task RemoveDriver(Driver driver);
+        Task <bool> UpdateDriverLocation (decimal latitude, decimal longitude, int userId);
+        Task<bool> ChangeDriverAvailability (bool isOnline, int userId);
+        Task <Driver?> GetDriver(int userId);
 
-        IEnumerable <Driver> GetAllDrivers ();
+        Task<IEnumerable<Driver>> GetAllDrivers ();
 
-        IEnumerable<Driver> GetOnlineDrivers ();
-        IEnumerable<Driver> GetNearbyDrivers ();
+        Task<IEnumerable<Driver>> GetOnlineDrivers ();
+        Task<IEnumerable<Driver>> GetNearbyDrivers (decimal latitude, decimal longitude);
 
 
     }
