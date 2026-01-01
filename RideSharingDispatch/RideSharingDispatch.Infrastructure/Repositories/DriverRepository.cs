@@ -72,7 +72,7 @@ namespace RideSharingDispatch.Infrastructure.Repositories
 
         public async Task <Driver?> GetDriver(int userId)
         {
-            return await context.Drivers.AsNoTracking().FirstOrDefaultAsync(d => d.UserId == userId); ;
+            return await context.Drivers.AsNoTracking().FirstOrDefaultAsync(d => d.UserId == userId);
         }
 
         public async Task<IEnumerable<Driver>> GetAllDrivers()
