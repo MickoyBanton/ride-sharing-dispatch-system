@@ -11,8 +11,9 @@ namespace RideSharingDispatch.Application.Interfaces
     public interface ITripRepository
     {
         Task CreateTripAsync(Trip trip);
+        Task<Trip?> GetTripByIdAsync(int tripId);
         Task<bool> AssignDriverAsync(int driverId, int tripId);
-        Task<bool> UpdateTripStatusAsync(TripStatus tripStatus, int tripId);
+        Task<bool> UpdateTripStatusAsync(int tripId, TripStatus tripStatus);
         Task<IReadOnlyList<Trip>> GetTripsByDriverIdAsync(int driverId);
         Task<IReadOnlyList<Trip>> GetTripsByRiderIdAsync(int riderId);
     }
