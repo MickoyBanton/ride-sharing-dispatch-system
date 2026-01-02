@@ -29,6 +29,11 @@ namespace RideSharingDispatch.Infrastructure.Repositories
             await context.SaveChangesAsync();
         }
 
+        public async Task<Trip?> GetTripByIdAsync(int tripId)
+        {
+            return await context.Trips.AsNoTracking().FirstOrDefaultAsync(t => t.Id == tripId);
+        }
+
         public async Task<bool> AssignDriverAsync(int driverId, int tripId)
         {
             var trip = await context.Trips.FirstOrDefaultAsync(t => t.Id == tripId);
