@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RideSharingDispatch.Application.Interfaces
 {
-    internal interface ILocationService
+    public interface ILocationService
     {
     }
 }
