@@ -119,6 +119,49 @@ namespace RideSharingDispatch.Tests
             mockTripRepo.Verify(r => r.UpdateTripStatusAsync(1, TripStatus.Accepted), Times.Once);
         }
 
+        [Fact]
+        public async Task GetTrip_ShouldReturnTrip_WhenTripExists()
+        {
+            var trip = new Trip
+            {
+                Id = 10,
+                PickupLatitude = 10,
+                PickupLongitude = 20
+            };
+
+            var mockTripRepo = new Mock<ITripRepository>();
+            var mockDriverRepo = new Mock<IDriverRepository>();
+
+            mockTripRepo.Setup(r => r.GetTripByIdAsync(10))
+                .ReturnsAsync(trip);
+
+            var service = new TripService(mockTripRepo.Object, mockDriverRepo.Object);
+
+            var result = await service.GetTrip(10);
+
+            Assert.NotNull(result);
+            Assert.Equal(10, result.Id);
+
+            mockTripRepo.Verify(r => r.GetTripByIdAsync(10), Times.Once);
+        }
+
+        [Fact]
+        public async Task GetTrip_ShouldReturnNull_WhenTripNotFound()
+        {
+            var mockTripRepo = new Mock<ITripRepository>();
+            var mockDriverRepo = new Mock<IDriverRepository>();
+
+            mockTripRepo.Setup(r => r.GetTripByIdAsync(It.IsAny<int>()))
+                .ReturnsAsync((Trip)null);
+
+            var service = new TripService(mockTripRepo.Object, mockDriverRepo.Object);
+
+            var result = await service.GetTrip(99);
+
+            Assert.Null(result);
+
+            mockTripRepo.Verify(r => r.GetTripByIdAsync(99), Times.Once);
+        }
 
 
     }
