@@ -93,6 +93,33 @@ namespace RideSharingDispatch.Tests
             Assert.False(result);
         }
 
+        [Fact]
+        public async Task UpdateTripStatus_ShouldReturnTrue_WhenTransitionIsValid()
+        {
+            var trip = new Trip
+            {
+                Id = 1,
+                TripStatus = TripStatus.Requested
+            };
+
+            var mockTripRepo = new Mock<ITripRepository>();
+            var mockDriverRepo = new Mock<IDriverRepository>();
+
+            mockTripRepo.Setup(r => r.GetTripByIdAsync(1))
+                .ReturnsAsync(trip);
+
+            mockTripRepo.Setup(r => r.UpdateTripStatusAsync(1, TripStatus.Accepted))
+                .ReturnsAsync(true);
+
+            var service = new TripService(mockTripRepo.Object, mockDriverRepo.Object);
+
+            var result = await service.UpdateTripStatus(1, TripStatus.Accepted);
+
+            Assert.True(result);
+            mockTripRepo.Verify(r => r.UpdateTripStatusAsync(1, TripStatus.Accepted), Times.Once);
+        }
+
+
 
     }
 }
