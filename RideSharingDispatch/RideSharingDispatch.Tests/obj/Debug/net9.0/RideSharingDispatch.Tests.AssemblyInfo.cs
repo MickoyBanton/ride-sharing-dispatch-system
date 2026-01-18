@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RideSharingDispatch.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfbef5faecc1a12767d58305b18dcc51a32e2a41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79b6814f64a56973556eed70bb232cf1b8f4e464")]
 [assembly: System.Reflection.AssemblyProductAttribute("RideSharingDispatch.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RideSharingDispatch.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
