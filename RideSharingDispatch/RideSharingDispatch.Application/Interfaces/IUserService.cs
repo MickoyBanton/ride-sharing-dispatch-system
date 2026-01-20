@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace RideSharingDispatch.Application.Interfaces
 {
-    public interface IDispatchService
+    public interface IUserService
     {
-        Driver? FindBestDriver(Trip trip);
-        IEnumerable<Driver> GetNearbyDrivers(decimal lat, decimal lng, int radiusKm);
+        Task RegisterRider(Rider rider);
+        Task UnregisterRider(Rider rider);
+
+        Task RegisterDriver(Driver driver);
+        Task UnregisterDriver(Driver driver);
     }
 }

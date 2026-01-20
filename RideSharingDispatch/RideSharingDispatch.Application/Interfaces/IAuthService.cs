@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RideSharingDispatch.Application.Interfaces
 {
-    public interface IUserRepository
+    public interface IAuthService
     {
+        Task<string> LoginAsync(string username, string password);
+        Task<string> LogoutAsync(string username, string password);
     }
 }
