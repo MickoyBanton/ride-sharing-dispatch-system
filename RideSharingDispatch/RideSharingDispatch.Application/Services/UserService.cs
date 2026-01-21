@@ -19,24 +19,24 @@ namespace RideSharingDispatch.Application.Services
             this.driverRepository = driverRepository;
         }
 
-        public Task RegisterRider(Rider rider)
+        public Task RegisterRider(Rider rider, User user)
         {
-            return riderRepository.AddRiderAsync(rider);
+            return riderRepository.AddRiderAsync(rider, user);
         }
 
-        public Task UnregisterRider(Rider rider)
+        public Task UnregisterRider(int userId)
         {
-            return riderRepository.RemoveRiderAsync(rider);
+            return riderRepository.RemoveRiderAsync(userId);
         }
 
-        public Task RegisterDriver(Driver driver)
+        public Task RegisterDriver(Driver driver, User user)
         {
-            return driverRepository.AddDriver(driver);
+            return driverRepository.AddDriver(driver, user);
         }
 
-        public Task UnregisterDriver(Driver driver)
+        public Task UnregisterDriver(int userId)
         {
-            return driverRepository.RemoveDriver(driver);
+            return driverRepository.RemoveDriver(userId);
         }
     }
 }
