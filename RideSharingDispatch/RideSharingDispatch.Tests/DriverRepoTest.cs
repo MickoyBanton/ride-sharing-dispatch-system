@@ -22,34 +22,77 @@ namespace RideSharingDispatch.Tests
         }
 
         [Fact]
-        public async Task AddDriver_AddsDriverSuccessfully()
+        public async Task AddDriver_AddsUserAndDriverSuccessfully()
         {
             using var context = CreateContext("AddDriverDb");
             var repo = new DriverRepository(context);
 
-            var driver = new Driver { Id = 1, Name = "John", IsOnline = false };
+            var user = new User { Id = 1, Email = "driver@test.com" };
+            var driver = new Driver { Id = 1, IsOnline = false };
 
-            await repo.AddDriver(driver);
-            await context.SaveChangesAsync();
+            await repo.AddDriver(driver, user);
 
-            Assert.Equal(1, context.Drivers.Count());
+            Assert.Single(context.Users);
+            Assert.Single(context.Drivers);
+
+            var savedDriver = context.Drivers.First();
+            Assert.Equal(user.Id, savedDriver.UserId);
         }
 
         [Fact]
-        public async Task RemoveDriver_RemovesDriverSuccessfully()
+        public async Task AddDriver_Throws_WhenUserIsNull()
+        {
+            using var context = CreateContext("AddDriverNullUserDb");
+            var repo = new DriverRepository(context);
+
+            var driver = new Driver { Id = 1 };
+
+            await Assert.ThrowsAsync<ArgumentNullException>(() =>
+                repo.AddDriver(driver, null!));
+        }
+
+
+        [Fact]
+        public async Task AddDriver_Throws_WhenDriverIsNull()
+        {
+            using var context = CreateContext("AddDriverNullDriverDb");
+            var repo = new DriverRepository(context);
+
+            var user = new User { Id = 1 };
+
+            await Assert.ThrowsAsync<ArgumentNullException>(() =>
+                repo.AddDriver(null!, user));
+        }
+
+
+
+        [Fact]
+        public async Task RemoveDriver_RemovesDriverAndUser()
         {
             using var context = CreateContext("RemoveDriverDb");
-            var driver = new Driver { Id = 1, Name = "John", IsOnline = false };
-            context.Drivers.Add(driver);
+
+            context.Users.Add(new User { Id = 5 });
+            context.Drivers.Add(new Driver { Id = 5, UserId = 5 });
             await context.SaveChangesAsync();
 
             var repo = new DriverRepository(context);
 
-            await repo.RemoveDriver(driver);
-            await context.SaveChangesAsync();
+            await repo.RemoveDriver(5);
 
+            Assert.Empty(context.Users);
             Assert.Empty(context.Drivers);
         }
+
+        [Fact]
+        public async Task RemoveDriver_Throws_WhenDriverNotFound()
+        {
+            using var context = CreateContext("RemoveDriverMissingDb");
+            var repo = new DriverRepository(context);
+
+            await Assert.ThrowsAsync<ArgumentException>(() =>
+                repo.RemoveDriver(99));
+        }
+
 
         [Fact]
         public async Task UpdateDriverLocation_UpdatesLocationSuccessfully()

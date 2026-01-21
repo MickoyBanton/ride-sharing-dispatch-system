@@ -23,58 +23,66 @@ namespace RideSharingDispatch.Tests
             );
         }
 
-        [Fact]
-        public async Task RegisterRider_CallsAddRiderAsync()
-        {
-            var rider = new Rider { Id = 1, UserId = 100 };
+        // ---------------- RIDER ----------------
 
-            await _service.RegisterRider(rider);
+        [Fact]
+        public async Task RegisterRider_CallsAddRiderAsync_WithCorrectArguments()
+        {
+            var user = new User { Id = 100 };
+            var rider = new Rider { Id = 1 };
+
+            await _service.RegisterRider(rider, user);
 
             _mockRiderRepo.Verify(
-                r => r.AddRiderAsync(rider),
+                r => r.AddRiderAsync(rider, user),
                 Times.Once
             );
         }
 
         [Fact]
-        public async Task UnregisterRider_CallsRemoveRiderAsync()
+        public async Task UnregisterRider_CallsRemoveRiderAsync_WithUserId()
         {
-            var rider = new Rider { Id = 2, UserId = 101 };
+            int userId = 101;
 
-            await _service.UnregisterRider(rider);
+            await _service.UnregisterRider(userId);
 
             _mockRiderRepo.Verify(
-                r => r.RemoveRiderAsync(rider),
+                r => r.RemoveRiderAsync(userId),
+                Times.Once
+            );
+        }
+
+        // ---------------- DRIVER ----------------
+
+        [Fact]
+        public async Task RegisterDriver_CallsAddDriver_WithCorrectArguments()
+        {
+            var user = new User { Id = 200 };
+            var driver = new Driver { Id = 5 };
+
+            await _service.RegisterDriver(driver, user);
+
+            _mockDriverRepo.Verify(
+                d => d.AddDriver(driver, user),
                 Times.Once
             );
         }
 
         [Fact]
-        public async Task RegisterDriver_CallsAddDriver()
+        public async Task UnregisterDriver_CallsRemoveDriver_WithUserId()
         {
-            var driver = new Driver { Id = 5, UserId = 200 };
+            int userId = 201;
 
-            await _service.RegisterDriver(driver);
+            await _service.UnregisterDriver(userId);
 
             _mockDriverRepo.Verify(
-                d => d.AddDriver(driver),
+                d => d.RemoveDriver(userId),
                 Times.Once
             );
         }
 
 
-        [Fact]
-        public async Task UnregisterDriver_CallsRemoveDriver()
-        {
-            var driver = new Driver { Id = 6, UserId = 201 };
 
-            await _service.UnregisterDriver(driver);
-
-            _mockDriverRepo.Verify(
-                d => d.RemoveDriver(driver),
-                Times.Once
-            );
-        }
     }
 
 
