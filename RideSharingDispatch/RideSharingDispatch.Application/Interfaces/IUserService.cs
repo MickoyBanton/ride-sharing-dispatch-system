@@ -1,4 +1,5 @@
-﻿using RideSharingDispatch.Domain.Entities;
+﻿using RideSharingDispatch.Application.DTOs;
+using RideSharingDispatch.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace RideSharingDispatch.Application.Interfaces
 
         Task RegisterDriver(Driver driver, User user);
         Task UnregisterDriver(int userId);
+        Task<LoginResult> LoginAsync(string email, string password);
     }
 }
