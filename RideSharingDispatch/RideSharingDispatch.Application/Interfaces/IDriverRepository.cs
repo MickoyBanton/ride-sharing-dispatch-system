@@ -9,8 +9,8 @@ namespace RideSharingDispatch.Application.Interfaces
 {
     public interface IDriverRepository
     {
-        Task AddDriver(Driver driver);
-        Task RemoveDriver(Driver driver);
+        Task AddDriver(Driver driver, User user);
+        Task RemoveDriver(int userId);
         Task <bool> UpdateDriverLocation (decimal latitude, decimal longitude, int userId);
         Task<bool> ChangeDriverAvailability (bool isOnline, int userId);
         Task <Driver?> GetDriver(int userId);
