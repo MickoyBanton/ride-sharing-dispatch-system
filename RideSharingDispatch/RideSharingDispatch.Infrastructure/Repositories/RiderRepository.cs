@@ -18,22 +18,35 @@ namespace RideSharingDispatch.Infrastructure.Repositories
             this.context = context; 
         }
 
-        public async Task AddRiderAsync(Rider rider)
+        public async Task AddRiderAsync(Rider rider, User user)
         {
 
-            if (rider == null)
+            if (rider == null || user == null)
                 throw new ArgumentNullException(nameof(rider));
+
+            await context.Users.AddAsync(user);
+            await context.SaveChangesAsync();
+
+            rider.UserId = user.Id;
 
             await context.Riders.AddAsync(rider);
             await context.SaveChangesAsync();
         }
 
-        public async Task RemoveRiderAsync(Rider rider)
+        public async Task RemoveRiderAsync(int userId)
         {
+            var rider = await context.Riders.FindAsync(userId);
+            var user = await context.Users.FindAsync(userId);
+
             if (rider == null)
-                throw new ArgumentNullException(nameof(rider));
+                throw new ArgumentException("Rider not found", nameof(userId));
+
+            if (user == null)
+                throw new ArgumentException("User not found", nameof(userId));
 
             context.Riders.Remove(rider);
+            context.Users.Remove(user);
+
             await context.SaveChangesAsync();
         }
 

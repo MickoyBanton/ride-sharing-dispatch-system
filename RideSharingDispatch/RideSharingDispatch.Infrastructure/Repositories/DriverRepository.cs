@@ -19,21 +19,34 @@ namespace RideSharingDispatch.Infrastructure.Repositories
             this.context = context;
         }
 
-        public async Task AddDriver(Driver driver)
+        public async Task AddDriver(Driver driver, User user)
         {
-            if (driver == null)
+            if (driver == null || user == null)
                 throw new ArgumentNullException(nameof(driver));
+
+            await context.Users.AddAsync(user);
+            await context.SaveChangesAsync();
+
+            driver.UserId = user.Id;
 
             await context.Drivers.AddAsync(driver);
             await context.SaveChangesAsync();
         }
 
-        public async Task RemoveDriver(Driver driver)
+        public async Task RemoveDriver(int userId)
         {
+            var driver = await context.Drivers.FindAsync(userId);
+            var user = await context.Users.FindAsync(userId);
+
             if (driver == null)
-                throw new ArgumentNullException(nameof(driver));
+                throw new ArgumentException("Driver not found", nameof(userId));
+
+            if (user == null)
+                throw new ArgumentException("User not found", nameof(userId));
 
             context.Drivers.Remove(driver);
+            context.Users.Remove(user);
+
             await context.SaveChangesAsync();
         }
 
