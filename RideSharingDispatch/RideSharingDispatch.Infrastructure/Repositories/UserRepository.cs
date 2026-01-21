@@ -1,4 +1,6 @@
-﻿using RideSharingDispatch.Application.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using RideSharingDispatch.Application.Interfaces;
+using RideSharingDispatch.Domain.Entities;
 using RideSharingDispatch.Domain.Enums;
 using RideSharingDispatch.Infrastructure.Data;
 using System;
@@ -20,14 +22,11 @@ namespace RideSharingDispatch.Infrastructure.Repositories
             this.context = context;
         }
 
-        public Task<UserRole> GetUserRole(int userId)
+        public async Task<User?> GetByEmailAsync(string email)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> IsUserValid(int userId, string password)
-        {
-            throw new NotImplementedException();
+            return await context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Email == email);
         }
     }
 }
