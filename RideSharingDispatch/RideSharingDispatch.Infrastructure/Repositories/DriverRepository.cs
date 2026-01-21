@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using RideSharingDispatch.Application.Interfaces;
 using RideSharingDispatch.Domain.Entities;
 using RideSharingDispatch.Infrastructure.Data;
@@ -24,9 +23,6 @@ namespace RideSharingDispatch.Infrastructure.Repositories
         {
             if (driver == null || user == null)
                 throw new ArgumentNullException(nameof(driver));
-
-            var hasher = new PasswordHasher<User>();
-            user.PasswordHash = hasher.HashPassword(user, user.PasswordHash);
 
             await context.Users.AddAsync(user);
             await context.SaveChangesAsync();
