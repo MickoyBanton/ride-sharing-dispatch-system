@@ -9,10 +9,10 @@ namespace RideSharingDispatch.Application.Interfaces
 {
     public interface IUserService
     {
-        Task RegisterRider(Rider rider);
-        Task UnregisterRider(Rider rider);
+        Task RegisterRider(Rider rider, User user);
+        Task UnregisterRider(int userId);
 
-        Task RegisterDriver(Driver driver);
-        Task UnregisterDriver(Driver driver);
+        Task RegisterDriver(Driver driver, User user);
+        Task UnregisterDriver(int userId);
     }
 }
