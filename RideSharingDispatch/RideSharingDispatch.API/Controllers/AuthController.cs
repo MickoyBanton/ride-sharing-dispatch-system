@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using RideSharingDispatch.Application.DTOs;
 using RideSharingDispatch.Application.Interfaces;
 using RideSharingDispatch.Domain.Entities;
+using RideSharingDispatch.Domain.Enums;
 using RideSharingDispatch.Infrastructure.Repositories;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -40,6 +42,53 @@ namespace RideSharingDispatch.API.Controllers
 
             return Ok(token);
 
+
+        }
+
+        [HttpPost("register/driver")]
+        public async Task<IActionResult> RegisterDriver(RegisterDriverRequest registerDriverRequest)
+        {
+            var user = new User
+            {
+                Email = registerDriverRequest.Email,
+                Role = UserRole.Driver,
+                PasswordHash = registerDriverRequest.Password // raw password (temporary)
+            };
+
+            var driver = new Driver
+            {
+                Name = registerDriverRequest.Name,
+                IsOnline = registerDriverRequest.IsOnline,
+                CurrentLatitude = registerDriverRequest.CurrentLatitude,
+                CurrentLongitude = registerDriverRequest.CurrentLongitude,
+                VehicleType = registerDriverRequest.VehicleType
+            };
+
+            await _userService.RegisterDriver(driver, user);
+
+            return Ok("Driver registered successfully.");
+
+        }
+
+
+        [HttpPost("register/rider")]
+        public async Task<IActionResult> RegisterRider(RegisterRiderRequest registerRiderRequest)
+        {
+            var user = new User
+            {
+                Email = registerRiderRequest.Email,
+                Role = UserRole.Rider,
+                PasswordHash = registerRiderRequest.Password // raw password (temporary)
+            };
+
+            var rider = new Rider
+            {
+                Name = registerRiderRequest.Name
+            };
+
+            await _userService.RegisterRider(rider, user);
+
+            return Ok("Rider registered successfully.");
 
         }
 
@@ -80,6 +129,7 @@ namespace RideSharingDispatch.API.Controllers
             };
         }
 
+        
 
     }
 }

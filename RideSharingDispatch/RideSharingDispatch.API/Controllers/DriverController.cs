@@ -2,11 +2,8 @@
 
 namespace RideSharingDispatch.API.Controllers
 {
-    public class DriverController : Controller
+    public class DriverController : ControllerBase
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
     }
 }
