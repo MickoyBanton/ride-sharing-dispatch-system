@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RideSharingDispatch.Application.DTOs
 {
-    internal class TripRequestDto
+    public class UpdateDriverStatusRequest
     {
+        public bool IsOnline { get; set; }
     }
 }
