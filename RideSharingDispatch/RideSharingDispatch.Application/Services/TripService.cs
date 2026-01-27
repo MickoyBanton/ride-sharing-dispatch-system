@@ -62,19 +62,31 @@ namespace RideSharingDispatch.Application.Services
 
         }
 
-        public void AcceptTrip(int tripId, int driverId)
+        public async Task<bool> CancelTrip(int tripId)
         {
-            Task<bool> newDriver = tripRepository.AssignDriverAsync(driverId, tripId);
+            var trip = await tripRepository.GetTripByIdAsync(tripId);
+
+
+            if (trip == null)
+            {
+                return false;
+            }
+
+            return await tripRepository.UpdateTripStatusAsync(tripId, TripStatus.Cancelled);
         }
 
-        public void CancelTrip(int tripId)
+        public async Task<bool> CompleteTrip(int tripId)
         {
-            tripRepository.UpdateTripStatusAsync(tripId, TripStatus.Cancelled);
-        }
+            var trip = await tripRepository.GetTripByIdAsync(tripId);
+            
 
-        public void CompleteTrip(int tripId)
-        {
-            tripRepository.UpdateTripStatusAsync(tripId, TripStatus.Completed);
+            if (trip == null)
+            {
+                return false;
+            }
+
+            return await tripRepository.UpdateTripStatusAsync(tripId, TripStatus.Completed);
+
         }
 
         public Task<Trip?> GetTrip(int tripId)
