@@ -14,13 +14,11 @@ namespace RideSharingDispatch.Application.Interfaces
 
         Task<bool> AssignDriver(int tripId);
 
-        void AcceptTrip(int tripId, int driverId);
-
         Task<bool> UpdateTripStatus(int tripId, TripStatus newTripStatus);
 
-        void CancelTrip(int tripId);
+        Task<bool> CancelTrip(int tripId);
 
-        void CompleteTrip(int tripId);
+        Task<bool> CompleteTrip(int tripId);
 
         Task<Trip?> GetTrip(int tripId);
     }
