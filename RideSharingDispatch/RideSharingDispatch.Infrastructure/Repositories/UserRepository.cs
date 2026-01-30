@@ -24,9 +24,14 @@ namespace RideSharingDispatch.Infrastructure.Repositories
 
         public async Task<User?> GetByEmailAsync(string email)
         {
+
             return await context.Users
                 .AsNoTracking()
-                .FirstOrDefaultAsync(u => u.Email == email);
+                .SingleOrDefaultAsync(u =>u.Email == email);
         }
+
+
     }
+
+
 }
