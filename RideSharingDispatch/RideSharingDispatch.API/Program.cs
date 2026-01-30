@@ -25,6 +25,7 @@ builder.Services.AddScoped<IRiderRepository, RiderRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITripService, TripService>();
 
+builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
 
@@ -61,6 +62,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 using (var scope = app.Services.CreateScope())
 {
