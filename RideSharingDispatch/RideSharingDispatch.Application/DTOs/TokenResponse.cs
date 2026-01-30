@@ -8,7 +8,7 @@ namespace RideSharingDispatch.Application.DTOs
 {
     public class TokenResponse
     {
-        public DateTime ExpiresAt;
-        public string? Token;
+        public string Token { get; set; } = string.Empty;
+        public DateTime ExpiresAt { get; set; }
     }
 }
