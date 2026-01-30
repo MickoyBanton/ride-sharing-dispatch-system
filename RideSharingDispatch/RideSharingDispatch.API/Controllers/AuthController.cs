@@ -8,7 +8,6 @@ using RideSharingDispatch.Application.DTOs;
 using RideSharingDispatch.Application.Interfaces;
 using RideSharingDispatch.Domain.Entities;
 using RideSharingDispatch.Domain.Enums;
-using RideSharingDispatch.Infrastructure.Repositories;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -22,16 +21,16 @@ namespace RideSharingDispatch.API.Controllers
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
 
-        public AuthController(IUserService userService, IConfiguration configuration) 
+        public AuthController(IUserService userService, IConfiguration configuration)
         {
             _userService = userService;
             _configuration = configuration;
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(string email, string password)
+        public async Task<IActionResult> Login([FromBody] UserLoginRequest loginRequest)
         {
-            var result = await _userService.LoginAsync(email, password);
+            var result = await _userService.LoginAsync(loginRequest.Email, loginRequest.Password);
 
             if (!result.IsSuccessful)
             {
