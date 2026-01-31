@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RideSharingDispatch.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58c30519e7b851ff87857ad22bada914a16c5696")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92a71c0d4ebd38992e46d3ec894bec7fb5393a14")]
 [assembly: System.Reflection.AssemblyProductAttribute("RideSharingDispatch.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RideSharingDispatch.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -23,6 +23,7 @@ builder.Services.AddScoped<IDriverRepository, DriverRepository>();
 builder.Services.AddScoped<IRiderRepository, RiderRepository>();
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IDriverService, DriverService>();
 builder.Services.AddScoped<ITripService, TripService>();
 
 builder.Services.AddControllers();

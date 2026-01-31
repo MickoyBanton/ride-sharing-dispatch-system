@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "ContainingType": "RideSharingDispatch.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "RideSharingDispatch.Application.DTOs.UserLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RideSharingDispatch.API.Controllers.AuthController",
+    "Method": "RegisterDriver",
+    "RelativePath": "api/auth/register/driver",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDriverRequest",
+        "Type": "RideSharingDispatch.Application.DTOs.RegisterDriverRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RideSharingDispatch.API.Controllers.AuthController",
+    "Method": "RegisterRider",
+    "RelativePath": "api/auth/register/rider",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRiderRequest",
+        "Type": "RideSharingDispatch.Application.DTOs.RegisterRiderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
