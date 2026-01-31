@@ -45,7 +45,7 @@ namespace RideSharingDispatch.API.Controllers
         }
 
         [HttpPost("register/driver")]
-        public async Task<IActionResult> RegisterDriver(RegisterDriverRequest registerDriverRequest)
+        public async Task<IActionResult> RegisterDriver([FromBody] RegisterDriverRequest registerDriverRequest)
         {
             var user = new User
             {
@@ -71,7 +71,7 @@ namespace RideSharingDispatch.API.Controllers
 
 
         [HttpPost("register/rider")]
-        public async Task<IActionResult> RegisterRider(RegisterRiderRequest registerRiderRequest)
+        public async Task<IActionResult> RegisterRider([FromBody] RegisterRiderRequest registerRiderRequest)
         {
             var user = new User
             {
