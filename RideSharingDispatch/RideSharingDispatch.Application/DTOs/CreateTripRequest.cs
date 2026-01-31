@@ -9,8 +9,6 @@ namespace RideSharingDispatch.Application.DTOs
 {
     public class CreateTripRequest
     {
-        public int RiderId { get; set; }
-
         public decimal PickupLatitude { get; set; }
         public decimal PickupLongitude { get; set; }
 
