@@ -2,10 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using RideSharingDispatch.Application.DTOs;
 using RideSharingDispatch.Application.Interfaces;
+using System.Security.Claims;
 
 namespace RideSharingDispatch.API.Controllers
 {
     [Authorize(Roles = "Driver")]
+    [Route("api/drivers")]
+
     public class DriverController : ControllerBase
     {
         private readonly IDriverService _driverService;
@@ -17,26 +20,30 @@ namespace RideSharingDispatch.API.Controllers
             _tripService = tripService;
         }
 
-        [HttpPut("{driverId}/status")]
-        public async Task<IActionResult> UpdateStatus(int driverId, UpdateDriverStatusRequest request)
+        [HttpPut("status")]
+        public async Task<IActionResult> UpdateStatus([FromBody] UpdateDriverStatusRequest request)
         {
-            bool result = await _driverService.SetOnlineStatus(request.IsOnline, driverId);
+            int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            bool result = await _driverService.SetOnlineStatus(request.IsOnline, userId);
 
             if (result == false)
             {
                 return BadRequest("Status Change failed");
             }
-            
-            return Ok();
+
+            return Ok(result);
         }
 
-        [HttpPut("{driverId}/location")]
-        public async Task<IActionResult> UpdateLocation(int driverId, UpdateDriverLocationRequest request)
+        [HttpPut("location")]
+        public async Task<IActionResult> UpdateLocation([FromBody] UpdateDriverLocationRequest request)
         {
+            int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
             bool result = await _driverService.UpdateLocation(
                 request.Latitude,
                 request.Longitude,
-                driverId
+                userId
             );
 
             if (result == false)
