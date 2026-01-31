@@ -58,7 +58,7 @@ namespace RideSharingDispatch.Application.Services
                 return new LoginResult
                 {
                     IsSuccessful = false,
-                    ErrorMessage = "Invalid email or password"
+                    ErrorMessage = "null user"
                 };
             }
 
@@ -70,7 +70,7 @@ namespace RideSharingDispatch.Application.Services
                 return new LoginResult
                 {
                     IsSuccessful = false,
-                    ErrorMessage = "Invalid email or password"
+                    ErrorMessage = "Invalid password"
                 };
             }
 
