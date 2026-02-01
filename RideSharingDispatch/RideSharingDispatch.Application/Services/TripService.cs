@@ -22,12 +22,12 @@ namespace RideSharingDispatch.Application.Services
             return tripRepository.CreateTripAsync(request);
         }
 
-        public async Task<bool> AssignDriver(int tripId)
+        public async Task<AcceptTripResult> AssignDriver(int tripId)
         {
             Trip? trip = await GetTrip(tripId);
 
             if (trip == null)
-                return false;
+                return AcceptTripResult.TripNotFound;
 
             decimal distance;
             decimal closestDistance = decimal.MaxValue;
@@ -53,12 +53,12 @@ namespace RideSharingDispatch.Application.Services
 
             if (closestDriver == null)
             {
-                return false;
+                return AcceptTripResult.NoAvailableDriver;
             }
 
-            bool assigned = await tripRepository.AssignDriverAsync(closestDriver.Id, tripId);
+            AcceptTripResult assigned = await tripRepository.AssignDriverAsync(closestDriver.Id, tripId);
 
-            return await UpdateTripStatus(tripId, TripStatus.Accepted);
+            return assigned;
 
         }
 
