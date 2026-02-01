@@ -12,7 +12,7 @@ namespace RideSharingDispatch.Application.Interfaces
     {
         Task CreateTrip(Trip trip);
 
-        Task<bool> AssignDriver(int tripId);
+        Task<AcceptTripResult> AssignDriver(int tripId);
 
         Task<bool> UpdateTripStatus(int tripId, TripStatus newTripStatus);
 
