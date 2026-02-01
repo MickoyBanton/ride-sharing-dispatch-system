@@ -4,10 +4,12 @@ using RideSharingDispatch.Application.DTOs;
 using RideSharingDispatch.Application.Interfaces;
 using RideSharingDispatch.Domain.Entities;
 using RideSharingDispatch.Domain.Enums;
+using System.Security.Claims;
 
 namespace RideSharingDispatch.API.Controllers
 {
     [Authorize]
+    [Route("api/trips")]
     public class TripController : ControllerBase
     {
         private readonly ITripService _tripService;
@@ -19,12 +21,15 @@ namespace RideSharingDispatch.API.Controllers
             _driverService = driverService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateTrip(CreateTripRequest request)
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateTrip([FromBody] CreateTripRequest request)
         {
+
+            int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
             var trip = new Trip
             {
-                RiderId = request.RiderId,
+                RiderId = userId,
                 PickupLatitude = request.PickupLatitude,
                 PickupLongitude = request.PickupLongitude,
                 DestinationLatitude = request.DestinationLatitude,
@@ -56,15 +61,36 @@ namespace RideSharingDispatch.API.Controllers
             return Ok("Trip cancelled");
         }
 
-        [HttpPost("trips/{tripId}/accept")]
+        [HttpPost("{tripId}/accept")]
         public async Task<IActionResult> AcceptTrip(int tripId)
         {
-            bool result = await _tripService.AssignDriver(tripId);
-            if (result == false)
+            var result = await _tripService.AssignDriver(tripId);
+
+            return result switch
             {
-                return BadRequest();
-            }
-            return Ok("Trip accepted");
+                AcceptTripResult.Success =>
+                    Ok("Trip accepted"),
+
+                AcceptTripResult.TripNotFound =>
+                    NotFound("Trip not found"),
+
+                AcceptTripResult.AlreadyAccepted =>
+                    Conflict("Trip has already been accepted"),
+
+                AcceptTripResult.NoAvailableDriver =>
+                    UnprocessableEntity("No available driver available"),
+
+                AcceptTripResult.TripStatusNotUpdated =>
+                    Conflict("Trip status could not be updated"),
+
+                AcceptTripResult.AssigningDriverFailed =>
+                    StatusCode(StatusCodes.Status500InternalServerError,
+                               "Failed to assign driver"),
+
+                _ =>
+                    StatusCode(StatusCodes.Status500InternalServerError,
+                               "Unknown error occurred")
+            };
         }
 
 
