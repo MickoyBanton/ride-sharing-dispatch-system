@@ -34,18 +34,29 @@ namespace RideSharingDispatch.Infrastructure.Repositories
             return await context.Trips.AsNoTracking().FirstOrDefaultAsync(t => t.Id == tripId);
         }
 
-        public async Task<bool> AssignDriverAsync(int driverId, int tripId)
+        public async Task<AcceptTripResult> AssignDriverAsync(int driverId, int tripId)
         {
-            var trip = await context.Trips.FirstOrDefaultAsync(t => t.Id == tripId);
+            var trip = await context.Trips
+        .FirstOrDefaultAsync(t => t.Id == tripId);
 
-            if (trip == null || trip.TripStatus != TripStatus.Requested)
-                return false;
+            if (trip == null)
+                return AcceptTripResult.TripNotFound;
+
+            if (trip.TripStatus != TripStatus.Requested)
+                return AcceptTripResult.AlreadyAccepted;
 
             trip.DriverId = driverId;
             trip.TripStatus = TripStatus.Accepted;
 
-            await context.SaveChangesAsync();
-            return true;
+            try
+            {
+                await context.SaveChangesAsync();
+                return AcceptTripResult.Success;
+            }
+            catch
+            {
+                return AcceptTripResult.AssigningDriverFailed;
+            }
         }
 
         public async Task<bool> UpdateTripStatusAsync(int tripId, TripStatus tripStatus)
