@@ -21,5 +21,7 @@ namespace RideSharingDispatch.Application.Interfaces
         Task<bool> CompleteTrip(int tripId);
 
         Task<Trip?> GetTrip(int tripId);
+
+        Task<IReadOnlyList<Trip>> GetRiderTrips(int riderId);
     }
 }
