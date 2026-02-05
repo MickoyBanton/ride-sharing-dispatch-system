@@ -155,9 +155,16 @@ namespace RideSharingDispatch.Application.Services
         }
 
 
+        public Task<IReadOnlyList<Trip>> GetRiderTrips(int riderId)
+        {
+            return tripRepository.GetTripsByRiderIdAsync(riderId);
+        }
+
         private decimal CalculateDistance(decimal pickupLongitude, decimal pickupLatitude, decimal driverLongitude, decimal driverLatitude)
         {
             return Math.Abs(pickupLatitude - driverLatitude) + Math.Abs(pickupLongitude - driverLongitude);
         }
+
+        
     }
 }
