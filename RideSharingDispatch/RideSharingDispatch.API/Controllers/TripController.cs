@@ -54,6 +54,19 @@ namespace RideSharingDispatch.API.Controllers
             return Ok(trip);
         }
 
+        [HttpGet("{riderId}/rider")]
+        public async Task<IActionResult> GetRiderTrips(int riderId)
+        {
+            var trips = await _tripService.GetRiderTrips(riderId);
+
+            if (trips == null)
+                return NotFound();
+
+            return Ok(trips);
+        }
+
+
+
         [HttpPost("{tripId}/cancel")]
         public async Task<IActionResult> CancelTrip(int tripId)
         {
