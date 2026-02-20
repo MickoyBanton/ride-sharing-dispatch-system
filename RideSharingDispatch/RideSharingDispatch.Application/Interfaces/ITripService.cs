@@ -10,7 +10,7 @@ namespace RideSharingDispatch.Application.Interfaces
 {
     public interface ITripService
     {
-        Task CreateTrip(Trip trip);
+        Task<Trip> CreateTrip(Trip trip);
 
         Task<AcceptTripResult> AssignDriver(int tripId);
 
@@ -23,5 +23,6 @@ namespace RideSharingDispatch.Application.Interfaces
         Task<Trip?> GetTrip(int tripId);
 
         Task<IReadOnlyList<Trip>> GetRiderTrips(int riderId);
+        Task<IReadOnlyList<Trip>> GetDriverTrips(int driverId);
     }
 }
