@@ -26,6 +26,7 @@ namespace RideSharingDispatch.API.Controllers
         {
 
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            Console.WriteLine("RiderId:", userId);
 
             var trip = new Trip
             {
@@ -38,9 +39,9 @@ namespace RideSharingDispatch.API.Controllers
                 TripStatus = TripStatus.Requested
             };
 
-            await _tripService.CreateTrip(trip);
+            Trip createdTrip = await _tripService.CreateTrip(trip);
 
-            return Ok(trip);
+            return Ok(createdTrip);
         }
 
         [HttpGet("{tripId}")]
@@ -54,10 +55,23 @@ namespace RideSharingDispatch.API.Controllers
             return Ok(trip);
         }
 
-        [HttpGet("{riderId}/rider")]
-        public async Task<IActionResult> GetRiderTrips(int riderId)
+        [HttpGet("rider")]
+        public async Task<IActionResult> GetRiderTrips()
         {
+            int riderId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             var trips = await _tripService.GetRiderTrips(riderId);
+
+            if (trips == null)
+                return NotFound();
+
+            return Ok(trips);
+        }
+
+        [HttpGet("driver")]
+        public async Task<IActionResult> GetDriverTrips()
+        {
+            int driverId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var trips = await _tripService.GetDriverTrips(driverId);
 
             if (trips == null)
                 return NotFound();
@@ -74,8 +88,8 @@ namespace RideSharingDispatch.API.Controllers
             return Ok("Trip cancelled");
         }
 
-        [HttpPost("{tripId}/accept")]
-        public async Task<IActionResult> AcceptTrip(int tripId)
+        [HttpPost("{tripId}/assign")]
+        public async Task<IActionResult> AssignTrip(int tripId)
         {
             var result = await _tripService.AssignDriver(tripId);
 
