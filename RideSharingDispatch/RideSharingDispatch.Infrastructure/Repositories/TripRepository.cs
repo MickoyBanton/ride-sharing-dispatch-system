@@ -20,13 +20,14 @@ namespace RideSharingDispatch.Infrastructure.Repositories
             this.context = context;
         }
 
-        public async Task CreateTripAsync(Trip trip)
+        public async Task <Trip> CreateTripAsync(Trip trip)
         {
             if (trip == null)
                 throw new ArgumentNullException(nameof(trip));
 
             await context.Trips.AddAsync(trip);
             await context.SaveChangesAsync();
+            return trip;
         }
 
         public async Task<Trip?> GetTripByIdAsync(int tripId)
