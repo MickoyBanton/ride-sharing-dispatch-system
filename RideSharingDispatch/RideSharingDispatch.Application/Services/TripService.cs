@@ -9,16 +9,16 @@ namespace RideSharingDispatch.Application.Services
 
         private readonly ITripRepository tripRepository;
         private readonly IDriverRepository driverRepository;
-
         public TripService (ITripRepository tripRepository, IDriverRepository driverRepository)
         {
             this.tripRepository = tripRepository;
             this.driverRepository = driverRepository;
         }
 
-        public Task CreateTrip(Trip request)
+        public Task <Trip> CreateTrip(Trip request)
         {
             // add fare calulation
+
             return tripRepository.CreateTripAsync(request);
         }
 
@@ -56,7 +56,7 @@ namespace RideSharingDispatch.Application.Services
                 return AcceptTripResult.NoAvailableDriver;
             }
 
-            AcceptTripResult assigned = await tripRepository.AssignDriverAsync(closestDriver.Id, tripId);
+            AcceptTripResult assigned = await tripRepository.AssignDriverAsync(closestDriver.UserId, tripId);
 
             return assigned;
 
@@ -154,10 +154,14 @@ namespace RideSharingDispatch.Application.Services
 
         }
 
-
         public Task<IReadOnlyList<Trip>> GetRiderTrips(int riderId)
         {
             return tripRepository.GetTripsByRiderIdAsync(riderId);
+        }
+
+        public Task<IReadOnlyList<Trip>> GetDriverTrips(int driverId)
+        {
+            return tripRepository.GetTripsByDriverIdAsync(driverId);
         }
 
         private decimal CalculateDistance(decimal pickupLongitude, decimal pickupLatitude, decimal driverLongitude, decimal driverLatitude)
